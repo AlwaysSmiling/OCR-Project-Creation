@@ -33,16 +33,18 @@
 				<p class="w3-large" style="text-align:justify; text-indent:50px;"> OCR is the short form for Optical Character Recognition. It identifies and extracts text from images. </p>
 			</div>
 		</div>
-	<!-- Instruction - How To -->
 	
-		<div class="w3-card-4 w3-amber w3-margin w3-center">
-			<div class="w3-padding-large">	
+	<table style="width:100%;">
+	<tr><td style="width:20%;">
+	<!-- Instruction - How To -->
+		<div class="w3-panel w3-amber w3-center">
+			<div class="w3-padding">	
 				<h3>How To: </h3>
 				<p class="w3-large"> To convert text from your image into a text file, choose an image with the help of the file selector or enter a URL </p>
 			</div>
 		</div>
-	
-	
+	</td>
+	<td style="width:40%;">
 	<!-- Step 1 -->
 	<div class="w3-container"> 
 		<div style="text-align: center;">
@@ -50,13 +52,14 @@
 		</div>
 		<div style="text-align: center;">
 			<table style="width: 100%;">
-				<tr><td style="width: 30%;"></td><td style="width: 30%;"><input id="upurl"class="w3-input w3-border w3-light-blue w3-margin" type="url" style="width: 100%;"placeholder="Enter URL"></td><td style="width: 30%;"></td>
-				<tr><td style="width: 30%;"></td><td style="width: 30%;"><h5 style="text-align: center;">OR</h5></td><td style="width: 30%;"></td>
-				<tr><td style="width: 30%;"></td><td style="width: 30%;"><input id="upimg" accept="image/*" class="w3-input w3-pale-blue w3-margin" type="file"  style="width: 100%;" placeholder="Select Image"></td><td style="width: 30%;"></td>
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upurl"class="w3-input w3-border w3-light-blue w3-margin" type="url" style="width: 100%;"placeholder="Enter URL"></td><td style="width: 5%;"></td>
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><h5 style="text-align: center;">OR</h5></td><td style="width: 5%;"></td>
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upimg" accept="image/*" class="w3-input w3-pale-blue w3-margin" type="file"  style="width: 100%;" placeholder="Select Image"></td><td style="width: 5%;"></td>
 			</table>
 			<button onclick="imageload()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" >Load Image</button>
 		</div>
 	</div>
+	</td><td style="width:20%;"></td></tr></table>
 	
 	<!--Step 2-->
 	<div class="w3-container w3-margin" id="editbox" style="display:none;">	
