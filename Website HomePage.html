@@ -52,9 +52,12 @@
 		</div>
 		<div style="text-align: center;">
 			<table style="width: 100%;">
-				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upurl"class="w3-input w3-border w3-light-blue w3-margin" type="url" style="width: 100%;"placeholder="Enter URL"></td><td style="width: 5%;"></td>
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upurl"class="w3-input w3-border w3-light-blue w3-margin" type="url" style="width: 100%;"placeholder="Enter URL" onchange="previewImageByURL(event)"></td><td style="width: 5%;"></td>
+
 				<tr><td style="width: 5%;"></td><td style="width: 90%;"><h5 style="text-align: center;">OR</h5></td><td style="width: 5%;"></td>
-				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upimg" accept="image/*" class="w3-input w3-pale-blue w3-margin" type="file"  style="width: 100%;" placeholder="Select Image"></td><td style="width: 5%;"></td>
+
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upimg" accept="image/*" class="w3-input w3-pale-blue w3-margin" type="file" onchange="previewImageByImg(event)"  style="width: 100%;" placeholder="Select Image"></td><td style="width: 5%;"></td>
+
 			</table>
 			<button onclick="imageload()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" >Load Image</button>
 		</div>
@@ -68,9 +71,11 @@
 			<p class="w3-margin"> Make sure the text is visible horizontally. Crop your image to remove unnecessary parts. </p>
 		</div>
 		<div style="text-align:center;">
-			<canvas class="w3-container" width="300" height="300" style="border:1px solid #000000;">
-			</canvas>
+		<!--	<canvas class="w3-container" width="300" height="300" style="border:1px solid #000000;">
+			</canvas> --> 
+			<div> <img src="blank-img.jpg" alt= "Image Preview" style="min-height: 100px ;max-height: 300px;min-width: 300px;max-width: 600px;margin-top: 15px;" id="image-field"></div> 
 		</div>
+
 		<div style="text-align:center;">
 		<button id="ocrrec" onclick="showdnld()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" style="text-align:center;">OCR</button>
 		</div>
@@ -97,6 +102,7 @@
 	</footer>
 	
 
-<script src="script.js"></script>
+<script src="script.js" >
+	</script>
 </body>
 </html>
