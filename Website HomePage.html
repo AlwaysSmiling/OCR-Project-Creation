@@ -7,6 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!--	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> 
+	    <link rel="stylesheet" href="dist/croppr.css"> -->
+
 	<style>
 	html, body, h1, h2, h3, h4, h5, h6 {
 	font-family: "Comic Sans MS", cursive, sans-serif;
@@ -77,32 +80,43 @@
 		</div>
 
 		<div style="text-align:center;">
-		<button id="ocrrec" onclick="showdnld()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" style="text-align:center;">OCR</button>
+
+		<button id="editImage" onclick="editImage()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" style="text-align:center;">Edit Image</button>
+
+		<br><br>
+        <button id="ocrrec" onclick="showdnld()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" style="text-align:center;">OCR</button>
 		</div>
 	</div>
 	
 	<!-- Step 3-->
 	<div class="w3-container w3-center" id="step3" style="display:none;">
 		<div class="w3-dropdown-click">
-			<button onclick="dropdown()" style="text-align:center;">Microsoft Word(.docx)</button>
+			<button onclick="dropdown()" style="text-align:center;" class="w3-yellow">Select File</button>
 			<div id="drpdwn" class="w3-dropdown-content w3-bar-block" style="text-align:center;">
-				<p>Text File(.txt)</p>
-				<p>PDF File(.pdf)</p>
+				<a href="#" class="w3-bar-item w3-button w3-orange w3-border w3-border-black">Text File(.txt)</a>
+				<a href="#" class="w3-bar-item w3-button w3-orange w3-border w3-border-black">PDF File(.pdf)</a>
+				<a href="#" class="w3-bar-item w3-button w3-orange w3-border w3-border-black">MS Word(.docx)</a>
+			
 			</div>
 		</div>
+		<br> <br>
 		<div class="w3-center">
 			<button id="download" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" style="text-align:center;">Download</button>
 		</div>
 	</div>
-	
+	<br><br><br>
 	<footer>
 		<div class="w3-topbar w3-border-red w3-hover-border-yellow">
 			<h6 text align="center">Made by Yours Truly</h6>
 		</div>
 	</footer>
 	
-
-<script src="script.js" >
-	</script>
+<script src="script.js" ></script>
+<!--<script src="https://cdn.scaleflex.it/plugins/filerobot-image-editor/3.11.1/filerobot-image-editor.min.js"/>
+	</script> -->
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://feather.aviary.com/imaging/v1/editor.js"></script>
+<script src="dist/croppr.js"></script>
 </body>
 </html>
