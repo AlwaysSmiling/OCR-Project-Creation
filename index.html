@@ -13,7 +13,7 @@
 	<style>
 	html, body, h1, h2, h3, h4, h5, h6 {
 	font-family: "Comic Sans MS", cursive, sans-serif;
-	background-image: url("bgimage.jpeg"); 
+	/*background-image: url("bgimage.jpg"); */ 
 	}
 	
 </style>
@@ -71,11 +71,11 @@
 		</div>
 		<div style="text-align: center;">
 			<table style="width: 100%;">
-				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upurl"class="w3-input w3-border w3-light-blue w3-margin" type="url" style="width: 100%;"placeholder="Enter URL"></td><td style="width: 5%;"></td>
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upurl"class="w3-input w3-border w3-light-blue w3-margin" type="url" style="width: 100%;"placeholder="Enter URL" onchange="previewImageByURL(event)"></td><td style="width: 5%;"></td>
 				<tr><td style="width: 5%;"></td><td style="width: 90%;"><h5 style="text-align: center;">OR</h5></td><td style="width: 5%;"></td>
-				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upimg" accept="image/*" class="w3-input w3-pale-blue w3-margin" type="file"  style="width: 100%;" placeholder="Select Image"></td><td style="width: 5%;"></td>
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upimg" accept="image/*" class="w3-input w3-pale-blue w3-margin" type="file"  style="width: 100%;" placeholder="Select Image" onchange="previewImageByImg(event)"></td><td style="width: 5%;"></td>
 			</table>
-			<button onclick="imageload()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" >Load Image</button>
+			<button onclick="imageload()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin hover-shadow-button" >Load Image</button>
 		</div>
 	</div>
 	</td><td style="width:20%;"></td></tr></table>
@@ -84,28 +84,37 @@
 	<div class="w3-container w3-margin" id="editbox" style="display:none;">	
 		<div style="text-align:center;">
 			<h3 class="w3-padding">Step 2: Preview and Make Changes </h3>
-			<p class="w3-margin"> Make sure the text is visible horizontally. Crop your image to remove unncessary parts. </p>
+			<p class="w3-margin"> Make sure the text is visible horizontally. Crop your image to remove unnecessary parts. </p>
 		</div>
 		<div style="text-align:center;">
-			<canvas class="w3-container" width="300" height="300" style="border:1px solid #000000;">
-			</canvas>
+		<!-- <canvas class="w3-container" width="300" height="300" style="border:1px solid #000000;">
+			</canvas> -->
+			<div> <img src="blank-img.jpg" alt= "Image Preview" style="min-height: 100px ;max-height: 300px;min-width: 300px;max-width: 600px;margin-top: 15px;" id="image-field"></div> 
 		</div>
 		<div style="text-align:center;">
-		<button id="ocrrec" onclick="showdnld()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" style="text-align:center;">OCR</button>
+		<button id="ocrrec" onclick="showdnld()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin hover-shadow-button" style="text-align:center;">OCR</button>
 		</div>
 	</div>
 	
 	<!-- Step 3-->
-	<div class="w3-container w3-center" id="step3" style="display:none;">
+    <div class="w3-container w3-center" id="step3" style="display:none;">
+<!--	<div class="box w3-large w3-round-large">
+			<select>
+				<option>Text File(.txt)</option>
+                <option>PDF File(.pdf)</option>
+                <option>MS Word(.docx)</option>
+			</select>
+		</div>    -->
 		<div class="w3-dropdown-click">
-			<button onclick="dropdown()" style="text-align:center;">Microsoft Word(.docx)</button>
+			<button onclick="dropdown()" style="text-align:center;" class="w3-yellow w3-hover-amber w3-large w3-border w3-round-large hover-shadow-button" id="selectfile">Text File(.txt)</button>
 			<div id="drpdwn" class="w3-dropdown-content w3-bar-block" style="text-align:center;">
-				<p>Text File(.txt)</p>
-				<p>PDF File(.pdf)</p>
+				<button type="button" class="w3-bar-item w3-button w3-orange w3-border w3-border-black hover-shadow-button" id="selectfile1" onclick="selectedFile(event)">PDF File(.pdf)</a>
+				<button type="button" class="w3-bar-item w3-button w3-orange w3-border w3-border-black hover-shadow-button" onclick="selectedFile(event)" id="selectfile2">MS Word(.docx)</button>
 			</div>
-		</div>
+		</div> 
+		<br><br>
 		<div class="w3-center">
-			<button id="download" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" style="text-align:center;">Download</button>
+			<button id="download" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin hover-shadow-button" style="text-align:center;">Download</button>
 		</div>
 	</div>
 	<!---footer--->
@@ -137,7 +146,7 @@
 				<div class= " footer-email-form">
 					<h2>Email us</h2>
 					 <input type ="email" placeholder =" enter your email address" id ="footer-email">
-					 <input type ="submit" id = "booter-email-btn">
+					 <input type ="submit" id = "footer-email-btn">
 
 				</div>
 			</div>

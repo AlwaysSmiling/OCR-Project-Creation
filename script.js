@@ -38,11 +38,11 @@ function dropdown() {
   } else {
     x.className = x.className.replace(" w3-show", "");
   }
+
 }
 
 function previewImageByImg(event){
 
-//	document.getElementById("editbox").style.display="block";
 	var reader =  new FileReader();
 	var imageField = document.getElementById("image-field")
 
@@ -59,3 +59,13 @@ function previewImageByURL(event){
 	var img = document.getElementById("image-field")
 	img.src = imageurl
 } 
+
+function selectedFile(event){
+  var typeOfFile = document.getElementById(event.target.id)
+  var selectfile = document.getElementById("selectfile")
+  var temp = selectfile.innerHTML
+  selectfile.innerHTML = typeOfFile.innerHTML
+  typeOfFile.innerHTML = temp
+  var x = document.getElementById("drpdwn");
+  x.className = x.className.replace(" w3-show", "");
+}
