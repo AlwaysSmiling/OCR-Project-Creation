@@ -2,6 +2,7 @@ import cv2
 import pytesseract
 import io
 import os
+import sys
 from spellchecker import SpellChecker
 
 
@@ -15,10 +16,8 @@ class SourceImg:
         self.edit = cv2.medianBlur(self.edit, 5)
 
 
-with io.open('lan.txt', "r", encoding="utf-8") as r:
-    lanstr = r.read()
-with io.open('output_format.txt', 'r', encoding='utf-8') as o:
-    out = o.read()
+lanstr = str(sys.argv[1])
+out = str(sys.argv[2])
 
 
 img = SourceImg()
