@@ -13,7 +13,7 @@ class SourceImg:
 
     def get_gray_noise(self):
         self.edit = cv2.cvtColor(self.edit, cv2.COLOR_BGR2GRAY)
-        self.edit = cv2.medianBlur(self.edit, 5)
+        self.edit = cv2.medianBlur(self.edit, 3)
 
 
 lanstr = str(sys.argv[1])
