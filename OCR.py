@@ -7,7 +7,7 @@ from spellchecker import SpellChecker
 
 class SourceImg:
     def __init__(self):
-        self.srcimg = cv2.imread("engex2.jpg")
+        self.srcimg = cv2.imread("source_raw.jpg")
         self.edit = self.srcimg
 
     def get_gray_noise(self):
