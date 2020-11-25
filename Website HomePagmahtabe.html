@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Minor Project Group 10</title>
+	<meta name="author" content="Pranjal Roy Vishvakarma">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<style>
+	html, body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-image: url(bgimage.jpeg);
+	}
+	
+	</style>
+
+</head>
+<body>
+	<header>
+	<div class="wrap">
+		<div class="w3-panel w3-bottombar w3-border-red w3-hover-border-yellow" >
+			<table style="width: 100%;">
+				<tr><td><h2>OCR Hindi and English</h2></td>
+				<td style="text-align:right;"><h3>About</h3></td></tr>
+			</table>
+		</div>
+	</header>
+	
+	<!-- Intro -->
+		<div class="w3-container w3-margin">
+			<div class="w3-padding">
+				<h3>OCR: </h3>
+				<p class="w3-large" style="text-align:justify; text-indent:50px;"> OCR is the short form for Optical Character Recognition. It identifies and extracts text from images. </p>
+			</div>
+		</div>
+	
+	<table style="width:100%;">
+	<tr><td style="width:20%;">
+	<!-- Instruction - How To -->
+		<div class="w3-panel w3-amber w3-center">
+			<div class="w3-padding">	
+				<h3>How To: </h3>
+				<p class="w3-large"> To convert text from your image into a text file, choose an image with the help of the file selector or enter a URL </p>
+			</div>
+		</div>
+	</td>
+	<td style="width:40%;">
+	<!-- Step 1 -->
+	<div class="w3-container"> 
+		<div style="text-align: center;">
+			<h3 class="w3-margin">Step 1: Enter Image URL or Select File </h3>
+		</div>
+		<div style="text-align: center;">
+			<table style="width: 100%;">
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upurl"class="w3-input w3-border w3-light-blue w3-margin" type="url" style="width: 100%;"placeholder="Enter URL" onchange="previewImageByURL(event)"></td><td style="width: 5%;"></td>
+
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><h5 style="text-align: center;">OR</h5></td><td style="width: 5%;"></td>
+
+				<tr><td style="width: 5%;"></td><td style="width: 90%;"><input id="upimg" accept="image/*" class="w3-input w3-pale-blue w3-margin" type="file" onchange="PreviewImage(event)"  style="width: 100%;" placeholder="Select Image"></td><td style="width: 5%;"></td>
+
+			</table>
+			<button onclick="imageload()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" >Load Image</button>
+		</div>
+	</div>
+	</td><td style="width:20%;"></td></tr></table>
+	
+	<!--Step 2-->
+	<div class="w3-container w3-margin" id="editbox" style="display:none;">	
+		<div style="text-align:center;">
+			<h3 class="w3-padding">Step 2: Preview and Make Changes </h3>
+			<p class="w3-margin"> Make sure the text is visible horizontally. Crop your image to remove unnecessary parts. </p>
+		</div>
+		<div id ="imageditor" style="text-align:center;">
+			<canvas id="imagecanvas" width="400" height="400"></canvas>
+		</div>
+		<div style="text-align:center;">
+			<button id="editImage" onclick="showOCRops()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" >Finallize</button>
+		</div>
+	</div>
+	
+	<!-- Step 3-->
+	<div class="w3-container w3-center" id="step3" style="display:none;">
+		<div class="w3-padding">
+			<table style='width: 100%'><tr>
+			<td style='width: 20%;'></td><td style='width: 40%;'><select class="w3-select" name="language">
+				<option value="" disabled selected>Select Language</option>
+				<option value="1">English</option>
+				<option value="2">Hindi</option>
+			</select></td><td style='width: 20%;'></td></tr>
+			<br>
+			<tr><td style='width: 20%;'></td><td style='width: 40%;'><select class="w3-select" name="output_type">
+				<option value="" disabled selected>Select A Filetype</option>
+				<option value="1">Text File (.txt)</option>
+				<option value="2">PDF File (.pdf)</option>
+				<option value="3">Word File (.docx)</option>
+			</select></td><td style='width: 20%;'></td></tr>
+			</table>
+		</div>
+		<button id="ocrrec" onclick="showdownload()" class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" style="text-align:center;">OCR</button>
+		<br> <br>
+		<div class="w3-center" id="download" style="display:none;">
+			<button class="w3-border w3-light-blue w3-hover-blue w3-round-large w3-large w3-margin" style="text-align:center;">Download</button>
+		</div>
+	</div>
+	<br><br><br>
+	<footer>
+		<div class="w3-topbar w3-border-red w3-hover-border-yellow">
+			<h6 text align="center">Made by Yours Truly</h6>
+		</div>
+	</footer>
+
+	
+<script src="script.js" ></script>
+</body>
+</html>
