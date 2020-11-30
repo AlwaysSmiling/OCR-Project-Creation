@@ -10,7 +10,7 @@ from itertools import zip_longest
 
 class SourceImg:
     def __init__(self):
-        self.srcimg = cv2.imread("Source_Raw.jpg")
+        self.srcimg = cv2.imread("source.jpg")
         self.edit = self.srcimg
 
     def get_gray_noise(self):
