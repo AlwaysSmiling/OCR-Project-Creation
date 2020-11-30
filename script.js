@@ -1,35 +1,31 @@
 //import Cropper from "cropper.js";
 
 var img = document.getElementById("editable");
-var canvas = document.createElement('CANVAS');
+var canvas = document.createElement("CANVAS");
 var ctx = canvas.getContext("2d");
 var imagedat = "";
 var rotnum;
 
-
-function openCity(cityName, elmnt, color) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-
-  // Show the specific tab content
-  document.getElementById(cityName).style.display = "block";
-
-  // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+//function openCity(cityName, elmnt, color) {
+//  // Hide all elements with class="tabcontent" by default */
+//  var i, tabcontent, tablinks;
+//  tabcontent = document.getElementsByClassName("tabcontent");
+//  for (i = 0; i < tabcontent.length; i++) {
+//    tabcontent[i].style.display = "none";
+//  }
+//
+//  // Remove the background color of all tablinks/buttons
+//  tablinks = document.getElementsByClassName("tablink");
+//  for (i = 0; i < tablinks.length; i++) {
+//    tablinks[i].style.backgroundColor = "";
+//  }
+//
+//  // Show the specific tab content
+//  document.getElementById(cityName).style.display = "block";
+//
+//  // Add the specific color to the button used to open the tab content
+//  elmnt.style.backgroundColor = color;
+//}
 
 function PreviewImage(event) {
   var inj = event.target;
@@ -55,7 +51,6 @@ img.onload = function () {
   canvas.width = img.naturalWidth;
   ctx.drawImage(img, 0, 0);
   imagedat = canvas.toDataURL(img);
-
 
   if (img.naturalWidth > 750 || img.naturalheight > 750) {
     if (img.naturalWidth >= img.naturalHeight) {
@@ -108,17 +103,17 @@ var t = document.getElementById("typ");
 
 function showdownload() {
   document.getElementById("ocrrec").innerHTML = "Please Wait.....";
-  
+
   var outputtype;
-  
+
   var xhr1 = new XMLHttpRequest();
-  xhr1.open("PUT", "OCR.py",true);
+  xhr1.open("PUT", "OCR.py", true);
   xhr1.send(imagedat);
-  
+
   var xhr2 = new XMLHttpRequest();
-  xhr2.open("PUT", "OCR.py",true);
+  xhr2.open("PUT", "OCR.py", true);
   xhr2.send(cropdat);
-  
+
   var xhr3 = new XMLHttpRequest();
   switch (t.value) {
     case 1:
@@ -151,12 +146,63 @@ function showdownload() {
   }
 
   var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+  xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("download").style.display = "block";
     }
   };
-  xhttp.open("GET", outputtype,true);
+  xhttp.open("GET", outputtype, true);
   xhttp.send();
-  
+}
+
+function read1() {
+  var readMoreText = document.getElementById("readmore1");
+  var readMoreButton = document.getElementById("read1Button");
+
+  if (readMoreText.style.display === "none") {
+    readMoreText.style.display = "block";
+    readMoreButton.innerHTML = "Read less";
+  } else {
+    readMoreText.style.display = "none";
+    readMoreButton.innerHTML = "Read More";
+  }
+}
+
+function read2() {
+  var readMoreText = document.getElementById("readmore2");
+  var readMoreButton = document.getElementById("read2Button");
+
+  if (readMoreText.style.display == "none") {
+    readMoreText.style.display = "block";
+    readMoreButton.innerHTML = "Read less";
+  } else {
+    readMoreText.style.display = "none";
+    readMoreButton.innerHTML = "Read More";
+  }
+}
+
+function read3() {
+  var readMoreText = document.getElementById("readmore3");
+  var readMoreButton = document.getElementById("read3Button");
+
+  if (readMoreText.style.display == "none") {
+    readMoreText.style.display = "block";
+    readMoreButton.innerHTML = "Read less";
+  } else {
+    readMoreText.style.display = "none";
+    readMoreButton.innerHTML = "Read More";
+  }
+}
+
+function read4() {
+  var readMoreText = document.getElementById("readmore4");
+  var readMoreButton = document.getElementById("read4Button");
+
+  if (readMoreText.style.display == "none") {
+    readMoreText.style.display = "block";
+    readMoreButton.innerHTML = "Read less";
+  } else {
+    readMoreText.style.display = "none";
+    readMoreButton.innerHTML = "Read More";
+  }
 }
