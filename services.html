@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Minor Project Group 10</title>
+  <meta name="author" content="Pranjal Roy Vishvakarma">
+  <meta name="description" content="lets make your documents digital editable text.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+  </style>
+</head>
+
+<body data- spy="scroll" data-target=".navbar-collapse" data-offset="100">
+  <header>
+    <div id="Home" class="tabcontent">
+
+    </div>
+
+    <div id="Online" class="tabcontent">
+    </div>
+
+    <div id="Languages" class="tabcontent" style="display: block;">
+    </div>
+
+
+
+    <button class="tablink" onclick="document.location='index.html'">Home</button>
+    <button class="tablink" onclick="document.location='demo.html'">Demo</button>
+    <button class="tablink" onclick="document.location='services.html'" id="defaultOpen" style="background-color: purple;">Services</button>
+
+  </header>
+
+
+
+  <br>
+  <br>
+
+
+  <div class="w3-container w3-orange">
+    <img src="img_assets/services logo.png" alt="services logo">
+    <br>
+    <div class="cardrow">
+
+
+
+      <div class="w3-card-4 cardcolumn" style="width:45%;">
+
+        <header class="w3-container w3-blue">
+
+
+          <img style="margin-top: 10px;width:100%; height:200px;" src="img_assets/services1a2.png" alt="photoshoot_pic"
+            class="w3-border w3-hover-sepia w3-image">
+
+          <h1 style="text-shadow:1px 1px 0 #444"> What is OCR & how do you OCR an image?</h1>
+        </header>
+
+        <div class="w3-container w3-red w3-xlarge" style="font-family: cursive;">
+          <p style="font-family: cursive;">Need to digitize paper documents? Just sit back and watch our online OCR
+            software do its magic! Our OCR tool will automatically scan your document for recognizable text within
+            images.<span id="dots1"> ...</span></p>
+
+          <p id="readmore1" style="font-family: cursive;">
+            <br>
+            You can even use your phone camera to take a picture of your document or page to process the file for our
+            OCR software, which would then recognize the text within the image file, and convert your file to the
+            portable document format (PDF)/MS Word/Text file as per your requirement. You can then edit the fonts or
+            texts within this file with ease and customize the newly created PDF/MS Word/Text File to your file
+            requirements.</p>
+          <br>
+
+          <button id="read1Button" onclick="read1()"> Read More </button>
+          <p>
+          <pre>    </pre>
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="w3-card-4 cardcolumn" style="width:45%;margin-left: 120px;">
+
+        <header class="w3-container w3-blue">
+
+
+          <img style="margin-top: 10px;width:100%; height:250px;" src="img_assets/services1b.jpg" alt="photoshoot_pic"
+            class="w3-circle w3-hover-sepia w3-image">
+
+          <h1 style="text-shadow:1px 1px 0 #444"> Scan & recognize information within images</h1>
+        </header>
+
+        <div class="w3-container w3-red w3-xlarge" style="font-family: cursive;">
+          <p id="readless" style="font-family: cursive;">Have a lot of files to recognize and convert with OCR? No
+            worries! Our OCR based technology gives you the power to batch recognize text from multiple files at once!
+            Turn an image to text and converted into PDF documents, word documents allowing you to edit scanned
+            documents with ease and avoid retyping documents in Microsoft Word or another application.<span id="dots">
+              ...</span></p>
+
+          <p id="readmore2" style="display: none; font-family: cursive;">
+            <br>
+            Please note that our OCR engine is not limited to English language. Our OCR tool can also recognize text
+            from images from our application's supported languages i.e. English as well as Hindi. Should you have any
+            image files containing these languages that you want to be able to detect text within, you can easily turn
+            these file types into editable PDFs and Word Documents using our OCR feature!</p>
+          <br>
+
+          <button id="read2Button" onclick="read2()"> Read More </button>
+          <p>
+          <pre>    </pre>
+          </p>
+        </div>
+      </div>
+
+
+
+    </div>
+    <br><br>
+
+    <div class="cardrow">
+      <div class="w3-card-4 cardcolumn" style="width:45%;">
+
+        <header class="w3-container w3-blue">
+
+          <img style="margin-top: 10px; width:100%; height:100%;" src="img_assets/services2.png" alt="photoshoot_pic"
+            class=" w3-hover-grayscale w3-image ">
+
+          <h1 style="text-shadow:1px 1px 0 #444"> Create PDFs using OCR or from blank</h1>
+        </header>
+
+        <div class="w3-container w3-red w3-xlarge" style="font-family: cursive;">
+          <p id="readless" style="font-family: cursive;">Our OCR recognition product is just one of the many ways you
+            can format documents to your needs. Try out our handy online Word File/ Text File/PDF Convertor tool to make
+            new PDFs/Word Files/Text Files from pictures, documents, from scratch or even excel sheets in seconds! Save
+            time and create an original file or pages for your documents in one simple step.<span id="dots"> ...</span>
+          </p>
+          <p id="readmore3" style="font-family: cursive;">
+            <br>
+            Try our online tools from your web browser or desktop. Use our online tools for processing documents
+            remotely. You can save your processed file to device as well as share it to families, friends and relatives.
+            Our software solution currently works online!</p>
+          <br>
+
+          <button id="read3Button" onclick="read3()"> Read More </button>
+          <p>
+          <pre>    </pre>
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+    <br><br>
+
+
+
+
+    <div class="w3-card-4" style="width:100%;">
+
+      <header class="w3-container w3-blue">
+
+
+
+        <h1 style="text-shadow:1px 1px 0 #444"> Features</h1>
+      </header>
+
+      <div class="w3-container w3-red w3-xlarge" style="font-family: cursive;">
+        <p style="font-family: cursive;">->Based on the Open-Source Tesseract OCR Engine.<br>
+          ->Unlimited uploads.<br>
+          ->No registration required. <br>
+          ->Free Service.<br>
+          ->Keeps your data safe and secure (All your files will be removed from the server).<br>
+          <span id="dots"> ...</span></p>
+
+        <p id="readmore4" style="display: none; font-family: cursive;">
+          <br>
+          ->Page layout analysis (multi-column text recognition).<br>
+          ->Selection of area on page for OCR.<br>
+          ->Different ways to display and process the resulting text.<br>
+          ->Download as file.<br>
+
+        </p>
+        <br>
+
+        <button id="read4Button" onclick="read4()"> Read More </button>
+        <p>
+        <pre>    </pre>
+        </p>
+      </div>
+    </div>
+
+
+
+    <br><br>
+
+  </div>
+
+
+  <div class="footer-container">
+    <div class="footer">
+      <div class=" footer-heading footer-1">
+        <h2>About</h2>
+        <a href=" ">Blog</a>
+        <a href=" ">Demo</a>
+        <a href=" ">Services</a>
+
+      </div>
+      <div class=" footer-heading footer-2">
+        <h2>Contact</h2>
+        <a href=" ">Facebook</a>
+        <a href=" ">Twitter</a>
+        <a href=" ">Instagram</a>
+
+      </div>
+      <div class=" footer-heading footer-3">
+        <h2>FAQs</h2>
+        <a href="FAQ.html">Ask queries</a>
+        <a href="FAQ.html">About services</a>
+
+      </div>
+      <div class=" footer-email-form">
+        <h2>Subscribe us</h2>
+        <input type="email" placeholder=" enter your email address" id="footer-email">
+        <input type="submit" id="footer-email-btn">
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w3-container" style="background-color: #212329">
+
+    <pre> <p class="w3-small tab" style="font-family: 'Comfortaa', cursive; color:#F5F9FC;"> Made with &#10084; by Pranjal, Dherya, Pipanshu and Mahtab                                                                                                                                                                                                            &#169LNCTS, Inc.</p></pre>
+    <br>
+  </div>
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
