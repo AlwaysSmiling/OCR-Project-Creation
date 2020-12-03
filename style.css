@@ -8,7 +8,7 @@
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
-  width: 33%;
+  width: 33.3333%;
 }
 
 /* Change background color of buttons on hover */
@@ -26,27 +26,21 @@
 
 /* Style each tab content individually */
 #Home {
-  background-image: url("img_assets/imgocr.PNG");
-  height: 270px;
-  width: 100%;
+  background-image: url("img_assets/OnlineOCR.png");
+  height: 350px;
+  width: 1024px;
+  margin-left: 250px;
 }
 #Online {
-  background-image: url("img_assets/onlineOCR.jpg");
-  height: 260px;
-  width: 700px;
-  margin-top: 10px;
-  margin-left: 295px;
-}
-/*height: 250px;width: 700px;margin-left: 250px;*/
-#Languages {
-  background-image: url("img_assets/languageOCR1.jpg");
-  height: 270px;
+  background-image: url("img_assets/imgocr.png");
+  height: 295px;
   width: 100%;
 }
-#Access {
-  background-image: url("img_assets/accessOCR6.jpg");
-  height: 270px;
-  width: 1265px;
+
+#Languages {
+  background-image: url("img_assets/OCR-Conversion.jpg");
+  height: 300px;
+  width: 100%;
 }
 
 * {
@@ -154,4 +148,17 @@
 .hover-shadow-button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#readmore1 {
+  display: none;
+}
+#readmore2 {
+  display: none;
+}
+#readmore3 {
+  display: none;
+}
+#readmore4 {
+  display: none;
 }

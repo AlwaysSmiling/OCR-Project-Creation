@@ -44,7 +44,8 @@
 
     <button class="tablink" onclick="document.location='index.html'">Home</button>
     <button class="tablink" onclick="document.location='demo.html'">Demo</button>
-    <button class="tablink" onclick="document.location='services.html'" id="defaultOpen" style="background-color: purple;">Services</button>
+    <button class="tablink" onclick="document.location='services.html'" id="defaultOpen"
+      style="background-color: purple;">Services</button>
 
   </header>
 
@@ -54,14 +55,12 @@
   <br>
 
 
-  <div class="w3-container w3-orange">
+  <div class="w3-container">
     <img src="img_assets/services logo.png" alt="services logo">
     <br>
-    <div class="cardrow">
+    <div class="w3-cell-row">
 
-
-
-      <div class="w3-card-4 cardcolumn" style="width:45%;">
+      <div class="w3-card-4 w3-cell" style="width:40%;">
 
         <header class="w3-container w3-blue">
 
@@ -71,8 +70,9 @@
 
           <h1 style="text-shadow:1px 1px 0 #444"> What is OCR & how do you OCR an image?</h1>
         </header>
-
-        <div class="w3-container w3-red w3-xlarge" style="font-family: cursive;">
+        <br>
+        <div class="w3-container w3-xlarge" style="font-family: cursive;">
+          <br>
           <p style="font-family: cursive;">Need to digitize paper documents? Just sit back and watch our online OCR
             software do its magic! Our OCR tool will automatically scan your document for recognizable text within
             images.<span id="dots1"> ...</span></p>
@@ -93,9 +93,9 @@
         </div>
       </div>
 
+      <div class="w3-cell" style="width: 10%;"></div>
 
-
-      <div class="w3-card-4 cardcolumn" style="width:45%;margin-left: 120px;">
+      <div class="w3-card-4 w3-cell" style="width:40%;">
 
         <header class="w3-container w3-blue">
 
@@ -105,8 +105,9 @@
 
           <h1 style="text-shadow:1px 1px 0 #444"> Scan & recognize information within images</h1>
         </header>
-
-        <div class="w3-container w3-red w3-xlarge" style="font-family: cursive;">
+        <br>
+        <div class="w3-container w3-xlarge" style="font-family: cursive;">
+          <br>
           <p id="readless" style="font-family: cursive;">Have a lot of files to recognize and convert with OCR? No
             worries! Our OCR based technology gives you the power to batch recognize text from multiple files at once!
             Turn an image to text and converted into PDF documents, word documents allowing you to edit scanned
@@ -133,8 +134,8 @@
     </div>
     <br><br>
 
-    <div class="cardrow">
-      <div class="w3-card-4 cardcolumn" style="width:45%;">
+    <div class="w3-cell-row">
+      <div class="w3-card-4 w3-cell" style="width:50%;">
 
         <header class="w3-container w3-blue">
 
@@ -143,8 +144,9 @@
 
           <h1 style="text-shadow:1px 1px 0 #444"> Create PDFs using OCR or from blank</h1>
         </header>
-
-        <div class="w3-container w3-red w3-xlarge" style="font-family: cursive;">
+        <br>
+        <div class="w3-container w3-xlarge" style="font-family: cursive;">
+          <br>
           <p id="readless" style="font-family: cursive;">Our OCR recognition product is just one of the many ways you
             can format documents to your needs. Try out our handy online Word File/ Text File/PDF Convertor tool to make
             new PDFs/Word Files/Text Files from pictures, documents, from scratch or even excel sheets in seconds! Save
@@ -163,49 +165,45 @@
           </p>
         </div>
       </div>
-
-
     </div>
     <br><br>
 
+    <div class="w3-cell-row">
 
+      <div class="w3-cell" style="width: 20%;"></div>
+      <div class="w3-card-4 w3-cell" style="width:60%;">
 
-
-    <div class="w3-card-4" style="width:100%;">
-
-      <header class="w3-container w3-blue">
-
-
-
-        <h1 style="text-shadow:1px 1px 0 #444"> Features</h1>
-      </header>
-
-      <div class="w3-container w3-red w3-xlarge" style="font-family: cursive;">
-        <p style="font-family: cursive;">->Based on the Open-Source Tesseract OCR Engine.<br>
-          ->Unlimited uploads.<br>
-          ->No registration required. <br>
-          ->Free Service.<br>
-          ->Keeps your data safe and secure (All your files will be removed from the server).<br>
-          <span id="dots"> ...</span></p>
-
-        <p id="readmore4" style="display: none; font-family: cursive;">
-          <br>
-          ->Page layout analysis (multi-column text recognition).<br>
-          ->Selection of area on page for OCR.<br>
-          ->Different ways to display and process the resulting text.<br>
-          ->Download as file.<br>
-
-        </p>
+        <header class="w3-container w3-blue">
+          <h1 style="text-shadow:1px 1px 0 #444"> Features</h1>
+        </header>
         <br>
+        <div class="w3-container w3-xlarge" style="font-family: cursive;">
+          <br>
+          <p style="font-family: cursive;">->Based on the Open-Source Tesseract OCR Engine.<br>
+            ->Unlimited uploads.<br>
+            ->No registration required. <br>
+            ->Free Service.<br>
+            ->Keeps your data safe and secure (All your files will be removed from the server).<br>
+            <span id="dots"> ...</span></p>
 
-        <button id="read4Button" onclick="read4()"> Read More </button>
-        <p>
-        <pre>    </pre>
-        </p>
+          <p id="readmore4" style="display: none; font-family: cursive;">
+            <br>
+            ->Page layout analysis (multi-column text recognition).<br>
+            ->Selection of area on page for OCR.<br>
+            ->Different ways to display and process the resulting text.<br>
+            ->Download as file.<br>
+
+          </p>
+          <br>
+
+          <button id="read4Button" onclick="read4()"> Read More </button>
+          <p>
+          <pre>    </pre>
+          </p>
+        </div>
       </div>
+      <div class="w3-cell" style="width: 20%;"></div>
     </div>
-
-
 
     <br><br>
 
